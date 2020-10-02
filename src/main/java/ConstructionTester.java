@@ -15,19 +15,19 @@ public class ConstructionTester
        taxRate = scanner.nextDouble();
  
        System.out.println("How many boards do you need? ");
-       windows = scanner.nextInt();
+       lumber = scanner.nextInt();
  
        System.out.println("How many windows do you need? ");
-       lumber = scanner.nextInt();
+       windows = scanner.nextInt();
  
  
        Construction build = new Construction(8.0, 11.0, taxRate);
  
-       total = build.lumberCost(lumber) + build.windowsCost(windows);
-       grandTotal = build.grandTotal(135.0);
+       total = build.lumberCost(lumber) + build.windowCost(windows);
+       double usergrandTotal = build.grandTotal(total);
  
-       System.out.println(total);
-       System.out.print(grandTotal);
+       System.out.println("Total: " + total);
+       System.out.print("Grand Total: " + usergrandTotal);
  
       
       
